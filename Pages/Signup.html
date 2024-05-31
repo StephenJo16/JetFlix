@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="Signup.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JetFlix - Sign Up</title>
+  </head>
+  <body>
+    <header class="showcase">
+      <div class="logo">
+        <a href="../Pages/index.html">
+          <h1><span>Jet</span>Flix - Sign Up</h1>
+        </a>
+      </div>
+      <div class="container">
+        <div class="video-container">
+          <video autoplay muted loop id="video-background">
+            <source src="../Images/Videos/Sign.mp4" type="video/mp4" />
+            Your device does not support the video!
+          </video>
+        </div>
+        <div class="formm">
+          <form id="signupForm" action="Movies.html">
+            <div id="errorContainer" class="error-container"></div>
+            <div class="info">
+              <input id="name" type="text" placeholder="Name" required />
+              <br />
+              <input
+                id="password"
+                type="password"
+                placeholder="Password"
+                required
+              />
+              <br />
+              <input
+                id="confirmPassword"
+                type="password"
+                placeholder="Confirm Password"
+                required
+              />
+              <br />
+              <input
+                id="dateOfBirth"
+                type="date"
+                placeholder="Date of Birth"
+                required
+              />
+              <br />
+              <select id="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+            </div>
+            <div class="terms">
+              <input id="termsAndConditions" type="checkbox" required /><label
+                for="termsAndConditions"
+                >I agree to the terms and conditions</label
+              >
+            </div>
+            <div class="btn">
+              <button onclick="validateSignup()" class="btn-primary">
+                Sign Up
+              </button>
+            </div>
+          </form>
+          <script src="../Pages/Validasi/validation.js"></script>
+        </div>
+      </div>
+      <footer>
+        <h5>Copyright@JetFlix - 2023 - Stephen Jo</h5>
+      </footer>
+    </header>
+  </body>
+</html>

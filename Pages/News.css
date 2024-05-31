@@ -1,0 +1,292 @@
+body {
+  background-color: black;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 32px;
+}
+h1 {
+  margin-top: 40px;
+  color: white;
+  text-align: center;
+}
+
+.nav {
+  z-index: 999;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  width: 100%;
+  height: 60px;
+  transition: background-color 0.3s ease;
+}
+
+.nav.scrolled {
+  background-color: transparent;
+  opacity: 0.5;
+}
+
+.nav .nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.nav .nav-links a:first-child {
+  margin-right: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo span:first-child {
+  margin-left: 20px;
+}
+
+.logo span {
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+.nav .nav-links a {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+.nav .nav-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav .nav-icons i {
+  color: white;
+  font-size: 24px;
+  margin-left: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav .nav-links a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.movies {
+  display: grid;
+  grid-template-columns: repeat(5);
+  grid-gap: 20px;
+}
+
+.movie {
+  background-color: #000000;
+  border: white 2px solid;
+  border-radius: 11px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+}
+
+.movie img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.movie img:hover {
+  transform: scale(1);
+  box-shadow: 0px 0px 25px rgb(248, 3, 3);
+}
+
+.movie-info {
+  margin-top: 16px;
+}
+.movie-info span {
+  color: white;
+}
+
+.movie-info h2 {
+  margin-bottom: 8px;
+  color: red;
+}
+.movie-info p {
+  color: white;
+}
+
+.buttons {
+  margin-top: 16px;
+}
+
+.play-button,
+.download-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.play-button {
+  background-color: darkred;
+  color: white;
+  margin-right: 8px;
+}
+
+.download-button {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
+
+.play-button:hover,
+.download-button:hover {
+  opacity: 0.8;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  grid-gap: 10px;
+  justify-content: center; /* Mengatur posisi grid secara horizontal menjadi terpusat */
+  align-items: center;
+}
+
+.cast label {
+  color: white;
+  margin-top: 8px;
+  display: block;
+}
+
+.cast:hover label {
+  margin-top: 24px;
+  font-weight: bold;
+}
+.cast img {
+  margin-top: 20px;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid red;
+}
+.cast:hover img {
+  border-width: 0px;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 25px rgb(255, 255, 255);
+}
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+}
+
+footer h5 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 16px;
+  }
+
+  h1 {
+    margin-top: 20px;
+  }
+
+  .nav {
+    height: 50px;
+  }
+
+  .nav .nav-links a:first-child {
+    margin-right: 20px;
+  }
+
+  .logo span:first-child {
+    margin-left: 10px;
+  }
+
+  .logo span {
+    font-size: 30px;
+  }
+
+  .nav .nav-links a {
+    font-size: 20px;
+    margin-left: 8px;
+    padding-left: 16px;
+  }
+
+  .nav .nav-icons i {
+    font-size: 20px;
+    margin-left: 8px;
+    margin-right: 16px;
+  }
+
+  .movies {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 10px;
+  }
+
+  .movie {
+    padding: 12px;
+    font-size: 20px;
+  }
+
+  .movie img {
+    border-radius: 6px;
+  }
+
+  .movie-info h2 {
+    margin-bottom: 6px;
+  }
+
+  .buttons {
+    margin-top: 12px;
+  }
+
+  .play-button,
+  .download-button {
+    padding: 6px 12px;
+    font-size: 14px;
+  }
+
+  .cast {
+    grid-template-columns: repeat(2, 120px);
+    grid-gap: 8px;
+  }
+
+  .cast img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  footer h5 {
+    font-size: 8px;
+    padding-top: 10px;
+  }
+}

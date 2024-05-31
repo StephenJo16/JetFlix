@@ -1,0 +1,415 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: black;
+  overflow: auto;
+}
+
+.nav {
+  z-index: 999;
+  display: flex;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 60px;
+  transition: background-color 0.3s ease;
+  background-color: black;
+}
+
+.nav.scrolled {
+  background-color: black;
+  opacity: 0.5;
+}
+
+.nav .nav-links {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+.nav .nav-links a:first-child {
+  margin-right: 40px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+.logo span:first-child {
+  margin-left: 20px;
+}
+
+.logo span {
+  font-size: 35px;
+  margin: 0;
+  padding: 0;
+}
+.nav .nav-links a {
+  color: white;
+  font-size: 26px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-left: 10px;
+  padding-left: 20px;
+}
+
+.nav .nav-icons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav .nav-icons i {
+  color: white;
+  font-size: 24px;
+  margin-left: 10px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.nav .nav-links a:hover {
+  text-decoration: none;
+  color: red;
+}
+
+.container {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  backdrop-filter: blur(12px) contrast(80%);
+  color: white;
+}
+.set h3 {
+  color: white;
+  display: flex;
+}
+.info {
+  padding-top: 24px;
+  padding-left: 24px;
+}
+.poster-info {
+  display: flex;
+  flex-direction: row;
+}
+
+.poster {
+  z-index: 999;
+  width: 480px;
+  height: 120vh;
+  overflow: hidden;
+}
+
+.poster img {
+  width: 500px;
+  height: 120vh;
+  object-fit: cover;
+  overflow: hidden;
+  transition: all 1.5s ease-in-out;
+}
+
+.poster img:hover {
+  transform: scale(1.04);
+}
+
+.info > div {
+  margin-top: 32px;
+  margin-bottom: 32px;
+  margin-right: 32px;
+}
+
+.movie-title {
+  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+  padding-bottom: 0.3rem;
+  text-shadow: 4px 4px 4px rgba(239, 16, 16, 0.6);
+  margin-bottom: 1rem;
+  padding-top: 20px;
+}
+.set h3 {
+  padding-bottom: 1px;
+}
+
+.set span {
+  color: red;
+  line-height: 1px;
+}
+
+.movie-description p {
+  color: red;
+}
+.movie-detail .set {
+  display: inline-block;
+  margin-right: 64px;
+}
+
+.movie-detail span {
+  font-size: 22px;
+}
+
+.movie-description {
+  line-height: 24px;
+}
+.movie-description h3 {
+  color: white;
+}
+
+.carousel-container h1 {
+  padding-bottom: 20px;
+  color: white;
+  text-align: center;
+  justify-content: center;
+}
+.movie-cast .header {
+  font-size: 24px;
+  margin-bottom: 24px;
+}
+.movie-cast {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+}
+.movie-cast .list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 120px);
+  grid-gap: 32px;
+}
+
+.movie-cast .cast {
+  width: 120px;
+  height: 160px;
+  cursor: pointer;
+}
+
+.movie-cast img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 16px;
+  border: 2px solid red;
+}
+
+.movie-cast .cast:hover img {
+  border-width: 0px;
+  transform: scale(1.1);
+  box-shadow: 0px 0px 25px rgb(255, 255, 255);
+}
+
+.movie-cast label {
+  margin-top: 8px;
+  display: block;
+}
+
+.movie-cast .cast:hover label {
+  margin-top: 24px;
+  color: red;
+  font-weight: bold;
+}
+
+.episode img {
+  width: 200px;
+  height: 100px;
+}
+.episode h4 {
+  color: red;
+}
+.episode {
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+.episode p {
+  color: white;
+}
+.episode span {
+  color: white;
+}
+
+.episode-container {
+  height: 10px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  transition: transform 0.4s ease;
+}
+
+.episodes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.epis .episode {
+  flex: 0 0 auto;
+  width: 100px;
+  padding: 10px;
+}
+
+.play-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.play-icon i {
+  color: white;
+  font-size: 48px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  background-color: black;
+  bottom: 0;
+  width: 100%;
+}
+
+footer h5 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin: 0;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.carousel-container {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 20px;
+}
+
+.card {
+  margin-left: 20px;
+  width: 300px;
+  margin-right: 20px;
+  scroll-snap-align: start;
+  background-color: #f0f0f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover::before {
+  opacity: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 10px;
+}
+
+.card-content span {
+  color: red;
+}
+
+.card-content h3 {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.card-content p {
+  font-size: 14px;
+  font-weight: medium;
+  color: #888;
+}
+
+.prev-button {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  left: 120px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: red;
+  border: none;
+  outline: none;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+.next-button {
+  z-index: 999;
+  position: absolute;
+  top: 50%;
+  right: 125px;
+  transform: translateY(-50%);
+  background-color: transparent;
+  color: red;
+  border: none;
+  outline: none;
+  font-size: 80px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .poster {
+    width: 100%;
+    height: auto;
+    max-width: 1300px;
+    max-height: 1000px;
+  }
+
+  .info > div {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    margin-right: 0;
+  }
+
+  .carousel {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    scroll-snap-type: unset;
+  }
+
+  .card {
+    width: 400px;
+    margin-right: 10px;
+  }
+}
